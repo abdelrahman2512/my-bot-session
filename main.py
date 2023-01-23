@@ -127,7 +127,7 @@ async def start_app(c:Client,m:Message):
 			New += f'🆔 الايدي: {m.from_user.id}\n\n'
 			New += f'🌀 اصبح عدد المستخدمين: {len(await get_users())}'
 			await add_user(user_id=user)
-			await app.send_message(ME,text,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f"{m.from_user.first_name}",user_id=int(user))]]))
+			await app.send_message(ME,New,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f"{m.from_user.first_name}",user_id=int(user))]]))
 		do = requests.get(f"https://api.telegram.org/bot{token}/getChatMember?chat_id=@xco_de&user_id={user}").text
 		if do.count("left") or do.count("Bad Request: user not found"):
 			await m.reply(Sub, 
