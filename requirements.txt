@@ -1,0 +1,6 @@
+pyrogram 
+pymongo[srv]
+motor
+requests 
+pyromod
+asyncio
