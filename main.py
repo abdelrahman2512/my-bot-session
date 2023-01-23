@@ -118,7 +118,7 @@ async def get_sudousers() -> list:
 	
 ### ---> dev Coder <--- ###
 
-@app.on_message(filters.command("/start")&filters.private)
+@app.on_message(filters.command("start")&filters.private)
 @app.on_edited_message(filters.command("start")&filters.private)
 async def start_app(c:Client,m:Message):
 	ch_id = m.chat.id
@@ -155,7 +155,7 @@ async def start_app(c:Client,m:Message):
 
 @app.on_message(filters.command("رفع مطور","")&filters.private&filters.user(ME))
 async def add_dev(c:Client,m:Message):
-	ask = await app.ask(m.chat.id,"**◍ ارسل ايدي المطور الآن \n√**")
+	ask = await app.ask(int(m.chat.id),"**◍ ارسل ايدي المطور الآن \n√**")
 	if not await is_sudo(user_id=ask.text):
 		text = "**◍ تم رفع {} مطور في البوت \n√**"
 		men = (await app.get_users(ask.text)).mention
@@ -167,7 +167,7 @@ async def add_dev(c:Client,m:Message):
 	
 @app.on_message(filters.command("تنزيل مطور","")&filters.private&filters.user(ME))
 async def del_dev(c:Client,m:Message):
-	ask = await app.ask(m.chat.id,"**◍ ارسل ايدي المطور الآن \n√**")
+	ask = await app.ask(int(m.chat.id),"**◍ ارسل ايدي المطور الآن \n√**")
 	if not is_sudo(user_id=ask.text):
 		await m.reply("**◍ هو ليس مطور بالبوت \n√**")
 	else:
