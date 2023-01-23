@@ -153,7 +153,7 @@ async def start_app(c:Client,m:Message):
 
 ### ---> dev Coder <--- ###
 
-@app.on_message(filters.regex("^رفع مطور$")&filters.private&filters.user(ME))
+@app.on_message(filters.command("رفع مطور","")&filters.private&filters.user(ME))
 async def add_dev(c:Client,m:Message):
 	ask = await app.ask(m.chat.id,"**◍ ارسل ايدي المطور الآن \n√**")
 	if not await is_sudo(user_id=ask.text):
@@ -165,7 +165,7 @@ async def add_dev(c:Client,m:Message):
 		men = (await app.get_users(ask.text)).mention
 		await m.reply("**◍ تم رفع {} مطور سابقا \n√**".format(men))
 	
-@app.on_message(filters.regex("^تنزيل مطور$")&filters.private&filters.user(ME))
+@app.on_message(filters.command("تنزيل مطور","")&filters.private&filters.user(ME))
 async def del_dev(c:Client,m:Message):
 	ask = await app.ask(m.chat.id,"**◍ ارسل ايدي المطور الآن \n√**")
 	if not is_sudo(user_id=ask.text):
