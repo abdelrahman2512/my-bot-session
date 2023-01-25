@@ -170,6 +170,7 @@ async def add_dev(c:Client,m:Message):
 			await m.reply("**◍ تم اضافته للمطورين سابقاا \n√")
 
 if __name__ == "__main__":
+	print("البوت اشتغل يبرنس ✅💝")
 	app.run()
 	
 	
