@@ -2,5 +2,5 @@ pyrogram
 pymongo[srv]
 motor
 requests 
-pyromod
-asyncio==1.4
+pyromod==1.4
+asyncio
