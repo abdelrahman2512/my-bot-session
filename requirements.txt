@@ -4,3 +4,4 @@ motor
 requests 
 pyromod==1.4
 asyncio
+TgCrypto 
