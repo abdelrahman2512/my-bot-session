@@ -125,7 +125,7 @@ async def start_app(c:Client,m:Message):
 	men = m.from_user.mention
 	user = m.from_user.id
 	
-	if not user == ME:
+	if not user == ME and not user in await get_users():
 		if not await is_user(user_id=user):
 			New = '➕ شخص جديد دخل الى البوت !\n\n'
 			New += f'👤 الأسم: {m.from_user.first_name}\n'
