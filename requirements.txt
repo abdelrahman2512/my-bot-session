@@ -3,4 +3,4 @@ pymongo[srv]
 motor
 requests 
 pyromod
-asyncio
+asyncio==1.4
