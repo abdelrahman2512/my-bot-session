@@ -22,7 +22,7 @@ ME = 5814324132
 
 app_id = 12643300
 api_hash = "73c1a336adc28a59661ff7761ff02672"
-token = "5964706073:AAGDnTpzn2BixBP5vTTRWMJD86Fdx8AHjdI"
+token = "5924205984:AAFHMgblw7hvw9WZahepCgRESke886KHA0s"
 
 app = Client(
 "s_s.",
