@@ -162,7 +162,7 @@ async def add_dev(c:Client,m:Message):
 		"◍ ارسل ايدي المطور \n√"
 		)
 		dev = Id.text
-		if not is_sudo(user_id=dev):
+		if not await is_sudo(user_id=dev):
 			await add_sudo(user_id=dev)
 			name = (await app.get_users(dev)).mention
 			await m.reply("**◍ تم رفعة مطور بنجاح \n√**")
