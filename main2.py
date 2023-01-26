@@ -1,4 +1,4 @@
-import pymongo
+
 from pyrogram import * 
 from pyrogram.types import * 
 from pyrogram.errors import * 
