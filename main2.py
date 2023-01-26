@@ -19,7 +19,7 @@ groupsdb = db.groups
 
 app = Client("db",12643300,"73c1a336adc28a59661ff7761ff02672","5924205984:AAFHMgblw7hvw9WZahepCgRESke886KHA0s")
 
-sudo = app.resolve_peer(5814324132)
+sudo = int(5814324132)
 
 async def is_user(user_id:int) -> bool:
 	user = await usersdb.find_one({"user_id":user_id})
